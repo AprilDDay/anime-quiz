@@ -1,17 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <Header />
+    <Select />
+    <Quiz />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Header from "./components/Header";
+import Select from "./components/Select";
+import Quiz from "./components/Quiz";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    Select,
+    Quiz
   }
-}
+};
 </script>
 
 <style>
