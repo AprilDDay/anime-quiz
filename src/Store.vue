@@ -43,8 +43,10 @@ export default new Vuex.Store({
             fetch(`https://opentdb.comp/api.php?amount=10&category=31&difficulty=${state.difficultyLevel}&type=multiple`)
                 .then(response => response.json())
                 .then(data=> {
-                    commit("SET_QUESTION", data.results);
-                    commit("SHUFFLED_ANSWER");
+                    commit('SET_QUESTION', data.results)
+                    commit ('STOP_LOADING')
+                    commit('SHUFFLED_ANSWER')
+                    commit('RESETQUIZ')
                     console.log(state.Question)
                 })
                 .catch(error => console.log("Error: ", error))

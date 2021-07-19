@@ -3,7 +3,7 @@
         <header>
             <h1>Anime quiz</h1>
             <div>
-                <button>reset</button>
+                <button @click="$store.commit('RESETQUIZ')>reset</button>
             </div>
         </header>
     </div>
